@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <fieldset>
+        <legend><h3>Settings Screen</h3></legend>
+          <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <label for="category">Group Category</label>
+                <select id="category" required="1" name="category" class="form-control category" (change)="onCatSelect($event)">
+                    <option value="">Select category</option>
+                    <option *ngFor="let category of categories" value={{category.name}}>
+                      {{category.name}}
+                    </option>
+                 </select>
+            </div>
+
+          </div>
+      </fieldset>
+

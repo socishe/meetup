@@ -1,0 +1,48 @@
+/*Header styles*/
+.pageHeader h1{
+  width: auto;
+  height: auto;
+  text-indent: 10px;
+  color: #fff;
+  margin: 0;
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+}
+.pageHeader h1 a {
+  display: block;
+  line-height: 1;
+  font-size: 30px;
+}
+
+/*Nav styles*/
+.pageHeader nav {
+  background: rgba(35, 31, 32, 0.58);
+  height: 50px;
+  top: 0px;
+}
+.pageHeader ul {
+  list-style: none;
+  font-size: 20px;
+  padding-left: 0px;
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  text-align: right;
+}
+.pageHeader li {
+  display: inline-block;
+  margin-right: 35px;
+  line-height: 2.5;
+}
+.pageHeader a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 300;
+}
+.pageHeader a:hover {
+  color: rgb(251, 174, 44);
+  background: none;
+}
+
