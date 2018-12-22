@@ -8,31 +8,23 @@ import { CatergoryService } from '../catergory.service';
 })
 export class SettingsComponent implements OnInit {
 categories;
-selectedVal;
+selectedVal: string;
   constructor(private categoryService: CatergoryService) { }
 
   ngOnInit() {
     this.categoryService.getCategories().subscribe(dataCategory => {
       const dataObject: any = [],
-      dataCategories = dataCategory.data;
+      dataCategories = dataCategory.results;
     for ( let i = 0; i < dataCategories.length; i++ ) {
-        dataObject.push(dataCategories[i].category.name);
+      dataObject.push(dataCategories[i].name);
       }
-        // Removing Duplicates
-        const filter = dataObject.filter((el , i, a ) => i === a.indexOf(el)),
-        cleanData = [];
-        for ( let c = 0; c < filter.length; c++) {
-          cleanData.push({
-            name: filter[c]
-        });
-        }
-       this.categories = cleanData;
+       this.categories = dataObject;
 
     });
   }
 
-  onCatSelect(event) {
+  onCatSelect(postInput: HTMLSelectElement) {
 
-    console.log(event.selectedVal.value);
+    console.log(postInput.value);
   }
 }
